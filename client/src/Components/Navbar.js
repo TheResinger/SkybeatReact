@@ -63,7 +63,7 @@ const NavBar = props => {
                 <ul className="navbar-nav mr-auto">
                     { !isAuthenticated ? unauthenticatedNavBar() : authenticatedNavBar()}
                 </ul>
-                <div class="form-inline my-2 my-lg-0">
+                <div className="form-inline my-2 my-lg-0">
                     <a href="https://github.com/TheResinger/SkybeatReact"><FontAwesomeIcon icon={faGithubSquare} size="2x" color="black"></FontAwesomeIcon></a>
                 </div>
             </div>

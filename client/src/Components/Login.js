@@ -20,39 +20,41 @@ const Login = props => {
         authContext.setUser(user);
         authContext.setIsAuthenticated(isAuthenticated);
         props.history.push('/');
-      } else setMessage(message);
+      } else {
+        setMessage(message);
+      }
     });
   };
 
   return (
-    <div>
-      <form onSubmit={onSubmitClick}>
-        <h3>Please Sign In</h3>
-        <label htmlFor="username" className="sr-only">
-          Username:{' '}
-        </label>
-        <input
-          type="text"
-          name="username"
-          onChange={onChange}
-          className="form-control"
-          placeholder="Enter Username"
-        />
-        <label htmlFor="password" className="sr-only">
-          Password:{' '}
-        </label>
-        <input
-          type="password"
-          name="password"
-          onChange={onChange}
-          className="form-control"
-          placeholder="Enter Password"
-        />
-        <button className="btn btn-large btn-primary btn-block" type="submit">
-          Log In
-        </button>
-      </form>
-      {message ? <Message message={message} /> : null}
+    <div className="form-group container">
+      <div className="row">
+        <div className="col-md-2"></div>
+        <div className="col-md-8 card" style={{marginTop: "1em"}}>
+          <br />
+          <h3 className="mb-4 mt-0 text-center">Please Sign In</h3>
+          <form onSubmit={onSubmitClick}>
+            <div className="form-group row">
+              <label htmlFor="username" className="col-sm-3 col-form-label" >Username:</label>
+              <div className="col-sm-9">
+              <input type="text" name="username" onChange={onChange} className="form-control" placeholder="Enter Username" />
+              </div>
+            </div>
+            <div className="form-group row">
+              <label htmlFor="password" className="col-sm-3 col-form-label" >Password:</label>
+              <div className="col-sm-9">
+              <input type="password" name="password" onChange={onChange} className="form-control" placeholder="Enter Password" />
+              </div>
+            </div>
+            <button className="btn btn-large btn-primary btn-block" type="submit"> Log In </button>
+          </form>
+          <br />
+        </div>
+          {message ? <Message message={message} /> : null}
+        <div className="col-md-2"></div>
+
+        
+      </div>
     </div>
   );
 };
