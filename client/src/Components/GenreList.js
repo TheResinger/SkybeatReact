@@ -72,7 +72,7 @@ const GenreList = prop => {
     });
 
     return (
-        <div className="card text-center">
+        <div className="card text-center border-dark">
             <div className="card-body">
                 <h5 className="card-text">All : {totalCount} Posts</h5>
                 <h5 className="card-text">Alternative : {genreCount[0]} Posts</h5>

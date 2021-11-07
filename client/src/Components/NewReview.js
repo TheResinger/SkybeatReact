@@ -47,7 +47,7 @@ const Reviews = prop => {
     <div className="form-group container">
       <div className ="row">
         <div className="col-md-2"></div>
-        <div className="col-md-8">
+        <div className="col-md-8 card" style={{marginTop: "1em"}}>
           <br />
           <h2 className="mb-4 mt-0 text-center">Enter your review.</h2>
           <form onSubmit={onSubmit}>
@@ -110,6 +110,7 @@ const Reviews = prop => {
               Submit
             </button>
           </form>
+          <br />
         </div>
         <div className="col-md-2"></div>
 
