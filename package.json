@@ -1,10 +1,13 @@
 {
-  "name": "ReactBoilerplate",
+  "name": "skybeatreact",
   "version": "1.0.0",
-  "description": "A boilerplate to build future react applications off of using the MERN stack",
+  "description": "Recreating one of my old projects into a modern stack.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
     "dev": "nodemon app.js",
     "start": "node app.js"
   },
